@@ -1,0 +1,264 @@
+body, html {
+    font-family: Arial, sans-serif;
+    margin-bottom: 50px; 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+article {
+    margin-bottom: 200px; 
+}
+
+
+header {
+    background: #333;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+header a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.title h1 {
+    color: #ffffff;
+    text-align: center;
+}
+article {
+    margin-bottom: 0; /* Elimina el margen inferior del primer article */
+}
+
+.contenido {
+    margin-top: 0; /* Elimina el margen superior del segundo article */
+}
+.container2 {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    max-height: 100%;
+    overflow: auto;
+    margin-top: 50px;
+    margin-bottom: 10px; 
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    max-height: 100%;
+    overflow: auto;
+    margin-top: 50px;
+    margin-bottom: 450px; 
+}
+.container {
+    overflow: visible;
+}
+.contenido h1{
+    text-align: center;
+}
+.contenido p {
+    margin-left: 130px; 
+    margin-right: 130px; 
+    text-align: justify;
+}
+
+.card-container {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card-body {
+    padding: 10px;
+}
+.tridente {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50x;
+}
+
+footer a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+footer a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease; /* Agrega una transición suave al transformar la imagen */
+}
+
+footer a:hover img {
+    transform: scale(1.2); /* Aumenta el tamaño de la imagen al pasar el mouse */
+    filter: brightness(0.8); /* Oscurece la imagen al pasar el mouse */
+}
+img {
+    width: 100%;
+    height: auto;
+}
+footer p {
+    margin: 10px 0;
+}
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.img-fluid {
+    animation: 1s ease-out 0s 1 slideInFromTop;
+    margin: 5px;
+}
+.instruction {
+    position: absolute;
+    left: -100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap; /* Asegura que el texto quede en una sola línea */
+    animation: slideIn 2s forwards, fadeOut 2s 4s forwards;
+}
+
+@keyframes slideIn {
+    100% { left: 50%; transform: translateX(-50%); } /* Centra el texto */
+}
+
+@keyframes fadeOut {
+    100% { opacity: 0; }
+}
+@media (max-width: 576px) {
+    .instruction {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .instruction {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 769px) {
+    .instruction {
+        font-size: 20px;
+    }
+}
+.frame-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin-top: -110px;
+}
+.frame {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 10px solid #000;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    border: 10px solid #92822E;
+    margin-bottom: 180px;
+}
+
+.profile {
+    position: relative;
+    z-index: 1; /* Asegura que la imagen de perfil esté encima del perchero */
+}
+
+.perchero {
+    position: absolute;
+    width: 315px; 
+    top: -235px; 
+    left: 50%; 
+    transform: translateX(-50%); /* Centra el perchero horizontalmente */
+    z-index: 0; /* Asegura que el perchero esté detrás del marco */
+}
+
+.frame img:not(.perchero) {
+    max-width: 100%;
+    max-height: 100%;
+}
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.frame-container, .informacion {
+    width: 50%;
+    padding: 0 20px; 
+}
+.informacion{
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+
+
+
+
+}
+
+.informacion div {
+    width: 50%;
+    padding: 20px;
+    border-left: 1px solid #000;
+    background: #92822E; /* Añade un fondo blanco */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Añade una sombra */
+    border-radius: 5px; /* Añade bordes redondeados */
+}
+
+.informacion h2 {
+    margin-top: 0; 
+    color: #333; 
+}
+
+.informacion p {
+    line-height: 1.6; /* Aumenta el espacio entre líneas */
+}
+.frame-container {
+    width: 50%;
+    padding: 0 20px; 
+    border-right: 1px solid #000; 
+    margin-top: 1px;
+}
